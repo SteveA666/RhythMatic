@@ -1,0 +1,18 @@
+# Eclipse
+.metadata/
+.recommenders/
+.settings/
+.classpath
+.project
+
+# Build output
+bin/
+out/
+target/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
