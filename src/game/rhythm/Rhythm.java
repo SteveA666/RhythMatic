@@ -41,6 +41,12 @@ public class Rhythm {
 		
 		j = new Judgement(status, pz, player);
 		im = new InputManager(j, clock);
+		im.bindCornerNodes(
+		        pz.getNodes()[0],
+		        pz.getNodes()[1],
+		        pz.getNodes()[3],
+		        pz.getNodes()[2]
+		);
 		
 		// Rhythm Game Window
 		window = new RhythmWindow(pz, im, status, 1280, 720);

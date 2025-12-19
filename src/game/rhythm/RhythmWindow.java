@@ -77,6 +77,7 @@ public class RhythmWindow {
 				root.getChildren().add(canvas);
 
 				Scene scene = new Scene(root, w, h);
+				im.attachToScene(scene);
 
 				stage.setTitle("RhythMatic - RhythmWindow Test");
 				stage.setScene(scene);
