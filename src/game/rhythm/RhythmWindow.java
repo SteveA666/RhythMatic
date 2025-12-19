@@ -70,9 +70,11 @@ public class RhythmWindow {
 				stage = new Stage();
 				Pane root = new Pane();
 				root.setPrefSize(w, h);
+				root.setFocusTraversable(true);
 
 				canvas = new Canvas(w, h);
 				gc = canvas.getGraphicsContext2D();
+				canvas.setFocusTraversable(true);
 
 				root.getChildren().add(canvas);
 
@@ -82,6 +84,8 @@ public class RhythmWindow {
 				stage.setTitle("RhythMatic - RhythmWindow Test");
 				stage.setScene(scene);
 				stage.show();
+				root.requestFocus();
+				canvas.requestFocus();
 				
 			}
 		});
