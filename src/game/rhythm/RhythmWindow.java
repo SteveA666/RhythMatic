@@ -86,6 +86,9 @@ public class RhythmWindow {
 				stage.show();
 				root.requestFocus();
 				canvas.requestFocus();
+				scene.getRoot().requestFocus();
+				stage.requestFocus();
+				scene.setOnMouseClicked(e -> scene.getRoot().requestFocus());
 				
 			}
 		});

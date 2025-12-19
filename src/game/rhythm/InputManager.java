@@ -104,6 +104,8 @@ public class InputManager {
             pausePressed = false;
         }
 
+        resetNodesToIdle();
+
         // Activation pulses
         if (pressTL) {
             activateNode(topLeft);
@@ -123,6 +125,21 @@ public class InputManager {
         if (pressBR) {
             activateNode(bottomRight);
             pressBR = false;
+        }
+    }
+
+    private void resetNodesToIdle() {
+        if (topLeft != null) {
+            topLeft.setState(State.IDLE);
+        }
+        if (topRight != null) {
+            topRight.setState(State.IDLE);
+        }
+        if (bottomLeft != null) {
+            bottomLeft.setState(State.IDLE);
+        }
+        if (bottomRight != null) {
+            bottomRight.setState(State.IDLE);
         }
     }
 
